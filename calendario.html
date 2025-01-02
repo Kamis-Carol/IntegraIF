@@ -4,48 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/calendario.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./logo.ico">
+
     <title>Calendário</title>
 </head>
 <body>
+    <!-- Header com Menu Navegável -->
     <header class="navMenu">
-    <div class="img2">
-        <img src="foto1.jpg" style="max-width: 100px; height: auto;">
-    </div>
-    <ul>
-        <a href="Principal.html"><li>Início</li></a>
-        <a href="Grupos.html"><li>Grupos</li></a>
-        <a href="Calendario.html"><li>Calendário</li></a>
-        <a href="Atendimentos.html" id="AtendimentosdosProfessores-bnt"><li>Atendimentos</li></a>
-    </ul>
-</header>
+        <div class="img2">
+            <img src="foto1.jpg" alt="Logo" style="max-width: 100px; height: auto;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Principal.html">Início</a></li>
+                <li><a href="Grupos.html">Grupos</a></li>
+                <li><a href="Calendario.html">Calendário</a></li>
+                <li id="AtendimentosdosProfessores-bnt"><a href="Atendimentos.html">Atendimentos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="calendar-container">
-    <button class="nav-btn" id="prev-month">&lt;</button>
-    <div class="month">
-        <ul>
-          <li id="current-month">Janeiro<br><span style="font-size:18px">2024</span></li>
+    <!-- Calendário -->
+    <main>
+        <div class="calendar-container">
+            <button class="nav-btn" id="prev-month">&lt;</button>
+            <div class="month">
+                <ul>
+                    <li id="current-month">Janeiro<br><span style="font-size:18px">2024</span></li>
+                </ul>
+            </div>
+            <button class="nav-btn" id="next-month">&gt;</button>
+        </div>
+
+        <ul class="weekdays">
+            <li>Dom</li>
+            <li>Seg</li>
+            <li>Ter</li>
+            <li>Qua</li>
+            <li>Qui</li>
+            <li>Sex</li>
+            <li>Sáb</li>
         </ul>
-    </div>
-    <button class="nav-btn" id="next-month">&gt;</button>
-</div>
+        <ul class="days" id="days-container">
+            <!-- Os dias serão gerados dinamicamente aqui -->
+        </ul>
+    </main>
 
-<ul class="weekdays">
-    <li>Dom</li>
-    <li>Seg</li>
-    <li>Ter</li>
-    <li>Qua</li>
-    <li>Qui</li>
-    <li>Sex</li>
-    <li>Sáb</li>
-</ul>
-<ul class="days" id="days-container">
-    <!-- Os dias serão gerados dinamicamente aqui -->
-</ul>
+    <!-- Footer -->
+    <footer>
+        <a>&copy; 2024 IntegraIF.<br>Todos os direitos reservados.</a>
+    </footer>
 
-<footer>
-    <a>&copy; 2024 IntegraIF.<br> Todos os direitos reservados.</a>
-</footer>
-
-<script src="./scripts/carousel.js"></script>
+    <script src="./scripts/carousel.js"></script>
 </body>
 </html>

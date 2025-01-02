@@ -1,0 +1,126 @@
+body { 
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    position: relative;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+}
+
+.month {
+    padding: 50px 25px;
+    width: 96%;
+    background: rgb(18, 222, 230); 
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Remove a bolinha da lista */
+}
+
+.month ul li {
+    color: white;
+    font-size: 24px; 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #080808;
+    border-radius: 10px;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 2px solid #12dee6;
+}
+.days {
+    padding: 20px 0;
+    background: #333;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day-item {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #555;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.day-item:hover {
+    background-color: rgb(18, 222, 230);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.calendar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.inactive {
+    background-color: #4b4848; /* Cor de fundo mais clara */
+    color:#4b4848;
+    pointer-events: none; /* Desativa interações */
+}
+
+
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 100%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 100%; padding: 10px;}
+    .days li .active {padding: 5px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 100%; padding: 5px;}
+}
