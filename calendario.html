@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/calendario.css">
+    <title>Calendário</title>
+</head>
+<body>
+    <header class="navMenu">
+    <div class="img2">
+        <img src="foto1.jpg" style="max-width: 100px; height: auto;">
+    </div>
+    <ul>
+        <a href="Principal.html"><li>Início</li></a>
+        <a href="Grupos.html"><li>Grupos</li></a>
+        <a href="Calendario.html"><li>Calendário</li></a>
+        <a href="Atendimentos.html" id="AtendimentosdosProfessores-bnt"><li>Atendimentos</li></a>
+    </ul>
+</header>
+
+<div class="calendar-container">
+    <button class="nav-btn" id="prev-month">&lt;</button>
+    <div class="month">
+        <ul>
+          <li id="current-month">Janeiro<br><span style="font-size:18px">2024</span></li>
+        </ul>
+    </div>
+    <button class="nav-btn" id="next-month">&gt;</button>
+</div>
+
+<ul class="weekdays">
+    <li>Dom</li>
+    <li>Seg</li>
+    <li>Ter</li>
+    <li>Qua</li>
+    <li>Qui</li>
+    <li>Sex</li>
+    <li>Sáb</li>
+</ul>
+<ul class="days" id="days-container">
+    <!-- Os dias serão gerados dinamicamente aqui -->
+</ul>
+
+<footer>
+    <a>&copy; 2024 IntegraIF.<br> Todos os direitos reservados.</a>
+</footer>
+
+<script src="./scripts/carousel.js"></script>
+</body>
+</html>
